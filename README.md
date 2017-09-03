@@ -26,7 +26,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 ## todo 
-- [ ] install devise
+- [X] install devise
 - [ ] install jquery and bootstrap
 - [ ] create menubar to display user menubar
 - [ ] add fullname 
