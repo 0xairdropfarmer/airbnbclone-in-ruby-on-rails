@@ -1,6 +1,6 @@
-<% unless flash.empty? %>
+<% unless resource.errors.empty? %>
 <script>
-    <% flash.each do | key,value | %>
+    <% resource.errors.full_messages.each do | key,value | %>
     <% type = key.to_s.gsub('alert','error').gsub('notice','success') %>
     toastr['<%= type %>']('<%= value %>')
     <% end %>

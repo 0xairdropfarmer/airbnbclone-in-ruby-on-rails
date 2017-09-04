@@ -4,7 +4,7 @@
     <h1 class="text-center">Sign Up</h1>
     <hr>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+      <%= render 'devise/shared/message' %>
      <div class="form-group">
         <%= f.label :fullname %><br />
         <%= f.text_field :fullname, autofocus: false, class: 'form-control' %>
