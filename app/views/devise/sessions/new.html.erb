@@ -22,6 +22,12 @@
       <div class="form-group">
           <%= f.submit "Log in", class: "btn btn-primary btn-block btn-lg" %>
       </div>
+      <div class="form-group">
+        <%= link_to(user_facebook_omniauth_authorize_path, class: "btn btn-block btn-social btn-facebook") do %>
+         <span class="fa fa-facebook"></span> Signin with facebook
+        <% end %>
+        </a>
+      </div>
     <% end %>
       <div class="text-center">
         <%= render "devise/shared/links" %>
