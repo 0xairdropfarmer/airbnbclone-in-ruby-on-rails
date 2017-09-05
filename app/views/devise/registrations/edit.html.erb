@@ -9,7 +9,12 @@
         <%= f.label :email %><br />
         <%= f.email_field :email, class: 'form-control'  %>
       </div>
-
+    <div class="form-group">
+      <%= f.number_field :phone_number, placeholder: "Phone Number",class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :description, placeholder: "Description",class:"form-control" %>
+    </div>
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
@@ -24,10 +29,6 @@
         <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'  %>
       </div>
 
-      <div class="form-group">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control'  %>
-      </div>
 
       <div class="form-group">
         <%= f.submit "Update", class: 'btn btn-lg btn-block btn-primary' %>
