@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-3">
+        <%= image_tag avatar(@user) ,class: "avatar-full" %>
+    
+        <div class="panel panel-success">
+            <div class="panel-heading">Verification</div>
+            <div class="panel-body">
+                Email Address<br/>
+                Phone Number
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <h2><%= @user.fullname %></h2>
+        <%=  @user.description %>
+    </div>
+</div>
