@@ -27,17 +27,17 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## todo 
 - [X] install devise
-- [ ] install jquery and bootstrap
-- [ ] create menubar to display user menubar
-- [ ] add fullname 
-- [ ] add Avatar
-- [ ] display flash message with toastr
-- [ ] testing fake email with mailtrap
-- [ ] send real email with mailgun
-- [ ] facebook authentication with omniauth
-- [ ] user profile
-- [ ] manage rooms
-- [ ] manage rooms photos
+- [X] install jquery and bootstrap
+- [X] create menubar to display user menubar
+- [X] add fullname 
+- [X] add Avatar
+- [X] display flash message with toastr
+- [X] testing fake email with mailtrap
+- [X] send real email with mailgun
+- [X] facebook authentication with omniauth
+- [X] user profile
+- [X] manage rooms
+- [X] manage rooms photos
 - [ ] room landing page
 - [ ] reservation
 - [ ] review 
