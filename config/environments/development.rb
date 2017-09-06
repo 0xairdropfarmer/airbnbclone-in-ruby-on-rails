@@ -63,5 +63,15 @@ config.action_mailer.smtp_settings = {
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  
+  config.paperclip_defaults = {
+    storage: :s3,
+    path: ':class/:attachment/:id/:style/:filename',
+    s3_host_name: 's3-ap-southeast-1.amazonaws.com',
+    s3_credentials:{
+      bucket: 'airbnbrails',
+      access_key_id:'AKIAJDDRBOIVCIJ7KIZQ',
+      secret_access_key: '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',
+      s3_region: 'ap-southeast-1'
+    }
+  }
 end
