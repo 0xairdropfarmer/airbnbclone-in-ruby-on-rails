@@ -66,3 +66,47 @@
   width: 1.25em;
   color: #00A699;
 }
+.btn {
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 9px 27px;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+}
+.btn.btn-default {
+  width: 100%;
+  border-color: #c4c4c4;
+  background: white;
+  color: #484848;
+  border-radius: 2px;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+.btn-file{
+  position:relative;
+  overflow:hidden;
+}
+.btn-file input[type=file]{
+  position:absolute;
+  top:0;
+  right:0;
+  min-width:100%;
+  min-height:100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity:0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+.preview {
+  padding: 0;
+}
+
+.preview img {
+  width: 100%;
+}

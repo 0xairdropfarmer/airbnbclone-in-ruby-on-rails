@@ -9,7 +9,9 @@ Rails.application.routes.draw do
       get 'amenities'
       get 'location'
     end
+    resources :photos, only: [:create]
   end
+  
   devise_for :users,
               path: '',
               path_names: {sign_in:'login',sign_out: 'logout',edit:'profile',sign_up: 'registration'},

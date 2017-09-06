@@ -1,0 +1,16 @@
+<% if @photos.count > 0 %>
+<br/></br>
+<div id="photo">
+<div class="row">
+    <% @photos.each do |photo| %>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                 <div class="panel-heading preview">
+                     <%= image_tag photo.image.url() %>
+                 </div>
+            </div>
+        </div>
+    <% end %>
+    </div>
+</div>
+<% end %>

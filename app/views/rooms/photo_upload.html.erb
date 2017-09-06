@@ -2,12 +2,28 @@
     <div class="col-md-3"><%= render 'room_menu' %></div>
     <div class="col-md-9">
     <div class="panel panel-default">
-        <div class="panel-heading"></div>
+        <div class="panel-heading">Photos Upload</div>
         <div class="panel-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-offset-3 col-md-6"></div>
-                </div>
+                <div class="col-md-offset-3 col-md-6">
+               <%= form_for @room,url: room_photos_path(@room), method: 'post',html: {multipart:true} do |f| %>
+                   <div class="row">
+                       <div class="form-group">
+                           <span class="btn btn-default btn-file text-babu">
+                               <i class="fa fa-cloud-upload"></i>
+                               Select Photos<%= file_field_tag "images[]", type: :file,multiple: true %>
+                               
+                       </span>
+                       </div>
+                    </div>
+                   <div class="text-center">
+                       <%= f.submit "Add Photos", class:"btn btn-success" %>
+                   </div>
+              <% end %>
+              </div>
+              </div>
+              <div id="photos"><%= render 'photos/photos_list' %></div>
             </div>
         </div>
     </div>
