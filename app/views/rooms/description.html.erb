@@ -14,8 +14,8 @@
                         </div>
                         <div class="form-group">
                             <label>Summary</label>
-                            <%= f.text_area :summary,rows:5, placeholder: "Summary of your house",class: "form-control",required:true %>
-                        </div>
+                        <%= f.text_area :summary, :class => "tinymce", :rows => 20, :cols => 30 %>
+                          </div>
                         <div class="text-center">
                             <%= f.submit "Save",class: "btn btn-success" %>
                         </div>
@@ -28,3 +28,4 @@
     </div>
     </div>
 </div>
+<%= tinymce %>

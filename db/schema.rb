@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905134714) do
+ActiveRecord::Schema.define(version: 20170907042955) do
 
-  create_table "photos", force: :cascade do |t|
-    t.integer "room_id"
+  create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_file_name"
@@ -23,7 +23,20 @@ ActiveRecord::Schema.define(version: 20170905134714) do
     t.index ["room_id"], name: "index_photos_on_room_id"
   end
 
-  create_table "rooms", force: :cascade do |t|
+  create_table "reservations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "room_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer "price"
+    t.integer "total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_reservations_on_room_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "rooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "home_type"
     t.string "room_type"
     t.integer "accommodate"
@@ -39,13 +52,15 @@ ActiveRecord::Schema.define(version: 20170905134714) do
     t.boolean "is_internet"
     t.integer "price"
     t.boolean "active"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude", limit: 24
+    t.float "longitude", limit: 24
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -60,8 +75,8 @@ ActiveRecord::Schema.define(version: 20170905134714) do
     t.datetime "updated_at", null: false
     t.string "fullname"
     t.string "confirmation_token"
-    t.time "confirmed_at"
-    t.time "confirmation_sent_at"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
     t.string "provider"
     t.string "uid"
     t.string "fbprofile"
@@ -72,4 +87,8 @@ ActiveRecord::Schema.define(version: 20170905134714) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "photos", "rooms"
+  add_foreign_key "reservations", "rooms"
+  add_foreign_key "reservations", "users"
+  add_foreign_key "rooms", "users"
 end

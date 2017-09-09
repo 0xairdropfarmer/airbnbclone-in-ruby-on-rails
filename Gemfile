@@ -4,6 +4,9 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+gem 'mysql2'
+gem 'bootstrap-datepicker-rails'
+gem 'tinymce-rails'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'devise'
@@ -15,6 +18,7 @@ gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'geocoder'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record

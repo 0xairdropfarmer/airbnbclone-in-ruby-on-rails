@@ -3,6 +3,7 @@
 @import "toastr";
 @import "bootstrap-social";
 @import "font-awesome";
+@import "bootstrap-datepicker3";
 .avatar-small{
     width:30px;
 }
@@ -72,6 +73,10 @@
   font-weight: bold;
   padding: 9px 27px;
 }
+.btn.btn-normal {
+  border: 1px solid #ff5a5f;
+  background-color: #ff5a5f;
+}
 .btn:hover, .btn:focus {
   color: #fff;
 }
@@ -140,4 +145,32 @@
 }
 .text-babu, .icon-babu {
   color: #00A699;
+}
+.row-space-1 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.amenities li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  list-style-type: none;
+}
+
+.amenities .text-line-through {
+  text-decoration: line-through;
+  color: rgba(0,0,0,0.45);
+  font-size: 14px;
+}
+// RESERVATIONS
+.reservation-table td {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #dce0e0;
+  padding: 10px;
+}
+
+.reservation-table .total td {
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
 }

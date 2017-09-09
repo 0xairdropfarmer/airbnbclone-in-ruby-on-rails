@@ -15,4 +15,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require toastr
-//= require_tree .
+//= require_tree 
+//= require tinymce-jquery
+//= require  bootstrap-datepicker
