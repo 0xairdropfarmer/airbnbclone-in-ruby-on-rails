@@ -38,7 +38,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - [X] user profile
 - [X] manage rooms
 - [X] manage rooms photos
-- [ ] room landing page
+- [X] room landing page
 - [ ] reservation
 - [ ] review 
 - [ ] room search
